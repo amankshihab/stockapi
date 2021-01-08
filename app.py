@@ -35,9 +35,10 @@ class stonks(Resource):
         info['Change'] = change[0].get_text()
         info['Price/share'] = stock_price[0].get_text()
         info['Ticker'] = ticker
-        info['Last Checked:'] = datetime.now()
+        info['Last Checked'] = datetime.now()
+        info['Created by'] = "Aman K. Shihab"
         
-        return(jsonify(info)), "Created by Aman K. Shihab"
+        return(jsonify(info))
 
 api.add_resource(stonks, '/<string:ticker>')
 
