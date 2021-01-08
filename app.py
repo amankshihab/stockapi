@@ -37,7 +37,7 @@ class stonks(Resource):
         info['Ticker'] = ticker
         info['Last Checked:'] = datetime.now()
         
-        return(jsonify(info))
+        return(jsonify(info)), "Created by Aman K. Shihab"
 
 api.add_resource(stonks, '/<string:ticker>')
 
